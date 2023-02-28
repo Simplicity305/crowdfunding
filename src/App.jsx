@@ -12,7 +12,6 @@ import Nav from "./components/Nav/Nav";
 //CSS
 import "./App.css";
 
-
 //Creating header layout 
 // 	- Not using curly brackets  is using smooth brackets 
 // 	- Because its an implicit return 
