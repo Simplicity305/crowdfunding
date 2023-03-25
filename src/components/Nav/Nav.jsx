@@ -9,7 +9,7 @@ import { LoginContext } from "../../LoginProvider";
 //     </nav>
 //   );
 // }
-import './nav.css';
+import './Nav.css';
 
 
 function Nav(props) {
@@ -22,17 +22,17 @@ function Nav(props) {
   }
   return (
       <nav>
+            <span className="company-name">SleepyDaze</span>
           {/* <div id="logo">
               <img src="src/images/Communitarian.png" alt="communitarian-logo" />
           </div> */}
-          <div id="nav-right">
-              {!loggedIn && <Link to="/login" 
-              className="btn">Login</Link>}
+            <div className="nav-links">
+                <Link to="/" >Home</Link>
+                <Link to="/projects" >Projects</Link>
+            </div>
+          <div className="login">
+              {!loggedIn && <Link className="btn" to="/login">Login</Link>}
               {loggedIn && <button onClick={handleClick}>Sign Out</button>}
-              <div id="nav-controls">
-                  <Link to="/" >Home</Link>
-                  <Link to="/projects" >Projects</Link>
-              </div>
           </div>
 
       </nav>

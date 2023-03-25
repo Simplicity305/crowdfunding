@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #000868;
+    color: white;
+}
+
+.company-name {
+    margin: auto 10px;
+}
+
+.nav-links {
+}
+.nav-links a { 
+    padding: 0 5px;
+    color: white;
+}
+.nav-links a:visited { color: yellow;}
+
+.login { 
+    margin: auto 10px;
+}
+.login a { color: white; }
+.login a:visited { color: yellow;}

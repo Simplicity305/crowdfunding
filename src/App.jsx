@@ -19,8 +19,8 @@ import { AuthProvider } from "./LoginProvider";
 // 	- Because its an implicit return 
 // Because not returning any function or state - just want it to return straight away 
 
-const HeaderLayout = () => (
-  <div>
+const Layout = () => (
+  <div className="layout">
     <Nav />
     <Outlet />
   </div>
@@ -29,7 +29,7 @@ const HeaderLayout = () => (
 
 const router = createBrowserRouter([
   {
-    element: <HeaderLayout />,
+    element: <Layout />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },

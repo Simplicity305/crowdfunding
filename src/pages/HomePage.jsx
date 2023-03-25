@@ -5,6 +5,8 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 import ProjectForm from "../components/ProjectForm/ProjectForm";
 
+import "./HomePage.css";
+
 function HomePage() {
   // State
   const [projectList, setProjectList] = useState([]);
@@ -17,8 +19,8 @@ function HomePage() {
         return results.json();
       })
       .then((data) => {
-        setProjectList(data);
-        console.log(data)
+        data.sort((a, b) => new Date(b.date_created).valueOf() - new Date(a.date_created).valueOf())
+        setProjectList(data.slice(0, 5));
       });
   }, []);
   // -----------------------
@@ -26,7 +28,7 @@ function HomePage() {
   return (
     <>
       <ProjectForm />
-      <div id="project-list">
+      <div className="project-list">
         {projectList.map((project, key) => <ProjectCard key={key} projectData={project} />)}
       </div>
     </>
@@ -34,7 +36,6 @@ function HomePage() {
 }
 
 export default HomePage;
-
 
 
 
