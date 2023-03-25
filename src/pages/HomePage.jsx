@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
+import ProjectForm from "../components/ProjectForm/ProjectForm";
+
 function HomePage() {
   // State
   const [projectList, setProjectList] = useState([]);
-
 
 
   // -------------Check if this section is correct-----
@@ -23,11 +24,12 @@ function HomePage() {
   // -----------------------
 
   return (
-    <div id="project-list">
-      {projectList.map((project, key) => {
-        return <ProjectCard key={key} projectData={project} />;
-      })}
-    </div>
+    <>
+      <ProjectForm />
+      <div id="project-list">
+        {projectList.map((project, key) => <ProjectCard key={key} projectData={project} />)}
+      </div>
+    </>
   );
 }
 

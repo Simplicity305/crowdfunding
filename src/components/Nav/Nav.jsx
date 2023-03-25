@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../../LoginProvider";
 
 // function Nav() {
 //   return (
@@ -7,12 +9,16 @@ import { Link } from "react-router-dom";
 //     </nav>
 //   );
 // }
+import './nav.css';
+
 
 function Nav(props) {
-  const { loggedIn, setLoggedIn } = props
+//   const { loggedIn, setLoggedIn } = props
+  const { loggedIn, setToken } = useContext(LoginContext)
   const handleClick = () => {
       window.localStorage.removeItem("token")
-      setLoggedIn(false)
+      setToken(null);
+    //   setLoggedIn(false)
   }
   return (
       <nav>
@@ -20,12 +26,15 @@ function Nav(props) {
               <img src="src/images/Communitarian.png" alt="communitarian-logo" />
           </div> */}
           <div id="nav-right">
-              {!loggedIn && <Link to="/login" className="btn">Login</Link>}
+              {!loggedIn && <Link to="/login" 
+              className="btn">Login</Link>}
+              {loggedIn && <button onClick={handleClick}>Sign Out</button>}
               <div id="nav-controls">
                   <Link to="/" >Home</Link>
+                  <Link to="/projects" >Projects</Link>
               </div>
           </div>
-          {loggedIn && <button onClick={handleClick}>Sign Out</button>}
+
       </nav>
   );
 }

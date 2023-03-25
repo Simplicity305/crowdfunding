@@ -5,12 +5,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
+import ListProjectsPage from "./pages/ListProjectsPage";
 
 // Components
 import Nav from "./components/Nav/Nav";
 
 //CSS
 import "./App.css";
+import { AuthProvider } from "./LoginProvider";
 
 //Creating header layout 
 // 	- Not using curly brackets  is using smooth brackets 
@@ -32,12 +34,15 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
+      { path: "/projects", element: <ListProjectsPage /> },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>;
 }
 
 export default App;

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import PledgeForm from "../components/PledgeForm/PledgeForm";
 
 function ProjectPage() {
   // State
   const [projectData, setProjectData] = useState({ pledges: [] });
+  
+  const [showPledgeForm, setShowPledgeForm] = useState(false);
 
   // Hooks
   const { id } = useParams();
@@ -37,11 +40,19 @@ function ProjectPage() {
   }, []);
   // --------------------------------------------
 
+//Handlers
+
+  const handlePledgeButtonClick = () => {
+    setShowPledgeForm(true);
+  };
+
   return (
     <div>
       <h2>{projectData.title}</h2>
       <h3>Created at: {projectData.date_created}</h3>
       <h3>{`Status: ${projectData.is_open}`}</h3>
+      <h3>{projectData.description}</h3>
+      <img src={projectData.image}/>
       <h3>Pledges:</h3>
       <ul>
         {projectData.pledges.map((pledgeData, key) => {
@@ -52,30 +63,12 @@ function ProjectPage() {
           );
         })}
       </ul>
+      <button onClick={handlePledgeButtonClick}>Make a pledge</button>{showPledgeForm && <PledgeForm />}
     </div>
   );
 }
 
 export default ProjectPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

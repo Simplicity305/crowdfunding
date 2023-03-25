@@ -1,22 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import { LoginContext } from "../../LoginProvider";
 
 
 function LoginForm() {
+    const { setToken } = useContext(LoginContext)
 
-    const [, setLoggedIn] = useOutletContext();
-    
+    console.log(`render triggered`)
+    // const [, setLoggedIn] = useOutletContext();
     //State
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
     });
+
+    console.log(`current render credentials:`, credentials)
+
     
     //Hooks 
     const navigate = useNavigate();
 
-    //Actions
-    const handleChange = (event) => {
+    // Actions
+    const handleChange = (event) => {   // function handleChange (event){ - equivalent ish
         const { id, value } = event.target;
 
         setCredentials((prevCredentials) => ({
@@ -25,12 +30,21 @@ function LoginForm() {
         }));
     };
 
+    // new Promise((res, rej) => {
+    //   setTimeout(() => res(5), 2000);
+    // }).then((x) => {
+    //   console.log(x)
+    // });
+
+    
 // post data ---------------
     const postData = async () => {
+      console.log(`postData start`)
         const response = await fetch(
         `${import.meta.env.VITE_API_URL}api-token-auth/`,
         {
             // posting 
+
             method: "post",
             headers: {
             "Content-Type": "application/json",
@@ -38,6 +52,7 @@ function LoginForm() {
             body: JSON.stringify(credentials),
         }
         );
+      console.log(`postData after await`)
         return response.json();
     };
 // Put async because using await
@@ -62,10 +77,15 @@ function LoginForm() {
 
     // Replacing the above handleSubmit - best practice/deviating/code is cleaner
         const handleSubmit = async (event) => {
+          console.log(`handleSubmitStart`)
             event.preventDefault();
             if (credentials.username && credentials.password) {
+                console.log(`posting credientials from submit`)
                 const { token } = await postData();
+                console.log(`setting token and navigating home`)
+
                 window.localStorage.setItem("token", token);
+                setToken(token);
                 // window because accessing the browser 
                 navigate("/");
             }
