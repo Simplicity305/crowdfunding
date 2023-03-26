@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LoginContext } from "../LoginProvider";
+import { Link } from "react-router-dom";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
@@ -7,9 +9,18 @@ import ProjectForm from "../components/ProjectForm/ProjectForm";
 
 import "./HomePage.css";
 
+// function GetStarted() {
+//   return <div className="get-started-container">
+//     <Link className="btn" to="/login">Get Started</Link>
+//   </div>
+// }
+
 function HomePage() {
+
+  const { loggedIn } = useContext(LoginContext)
   // State
   const [projectList, setProjectList] = useState([]);
+  const [showProjectForm, setShowProjectForm] = useState(false);
 
 
   // -------------Check if this section is correct-----
@@ -27,10 +38,20 @@ function HomePage() {
 
   return (
     <>
-      <ProjectForm />
+      <div className="page-main-header">Recent Projects</div>
+
+
       <div className="project-list">
         {projectList.map((project, key) => <ProjectCard key={key} projectData={project} />)}
       </div>
+
+      {/* <img src="/public/logo.gif"/> */}
+      { loggedIn && (showProjectForm
+          ? <ProjectForm />
+          : <div className="make-project-button">
+              <button  onClick={() => setShowProjectForm(true)}>Create a new project</button>
+          </div>)
+      }
     </>
   );
 }

@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { LoginContext } from "../../LoginProvider";
+import { Link } from "react-router-dom"
+
+import "./PledgeForm.css"
 
 function PledgeForm() {
     // const authToken = window.localStorage.getItem("token")
@@ -72,19 +75,21 @@ function PledgeForm() {
     return (
         <>
         {loggedIn?
-            <div>
+            <div className="pledge">
             <form onSubmit={handleSubmit}>
-                <div>
-                <label htmlFor="amount">Amount:</label>
+                <p className="form-name">SUBMIT A PLEDGE</p>
+                
+                <div className="pledge-form-rows">
+                <label htmlFor="amount">Amount </label>
                 <input
                     type="number"
                     id="amount"
-                    placeholder="Enter amount"
+                    placeholder="Enter number of sleep hours"
                     onChange={handleChange}
                 />
                 </div>
-                <div>
-                <label htmlFor="comment">Comment:</label>
+                <div className="pledge-form-rows">
+                <label htmlFor="comment">Comment </label>
                 <input
                     type="text"
                     id="comment"
@@ -92,9 +97,10 @@ function PledgeForm() {
                     onChange={handleChange}
                 />
                 </div>
-                <div>
-                <label htmlFor="anonymous">Anonymous:</label>
+                <div className="pledge-form-rows">
+                <label htmlFor="anonymous">Anonymous </label>
                 <input 
+                    className="check-box"
                     type="checkbox"
                     id="anonymous" 
                     onChange={handleChange} 
@@ -111,10 +117,10 @@ function PledgeForm() {
                     placeholder="needs to be auto-filled with current project"
                 /> */}
                 </div>
-                <button type="submit">Pledge</button>
+                <button className="pledge-submit-button" type="submit">Pledge</button>
             </form>
             </div> 
-        : (<p>Login to pledge</p>) }
+        : (<Link className="login-to-pledge" to="/login">Login to make a pledge</Link>) }
         </>
     );
 }

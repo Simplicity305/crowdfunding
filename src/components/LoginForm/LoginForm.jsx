@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { LoginContext } from "../../LoginProvider";
 
+import "./LoginForm.css"
 
 function LoginForm() {
     const { setToken } = useContext(LoginContext)
@@ -91,34 +92,39 @@ function LoginForm() {
             }
           };
 
-
     return (
+      <div className="login">
         <form onSubmit={handleSubmit}> 
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              onChange={handleChange}
-              placeholder="Enter username"
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              onChange={handleChange}
-              placeholder="Password"
-            />
-          </div>
-          <button type="submit">
+          {/* <div> */}
+            <p className="form-name">LOGIN</p>
+            
+            <div className="form-rows">
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                onChange={handleChange}
+                placeholder="Enter username"
+              />
+            </div>
+            <div className="form-rows">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                onChange={handleChange}
+                placeholder="Enter password"
+              />
+            </div>
+          {/* </div> */}
+
+          <button className="submit-button" type="submit">
             Login
           </button>
         </form>
+      </div>
       );
 
 }
-
         
 export default LoginForm;

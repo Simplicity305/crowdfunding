@@ -1,0 +1,116 @@
+.project-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.274); 
+    box-shadow: 10px rgba(184, 174, 174, 0.13);
+    margin: 1rem auto 3rem auto;
+    /* border-radius: 10px; */
+    width: 90%;
+    /* height: 90vh; */
+}
+
+.project-detail-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* border-radius: 10px 10px 0 0; */
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 2rem;
+
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.project-name {
+    text-align: left;
+}
+
+.status {
+    /* border */
+    text-align: center;
+
+}
+
+.project-description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.pledge-total {
+    font-weight: 500;
+    color: navy;
+}
+
+.created-date {
+    font-size: 0.8rem;
+    margin: 0;
+} 
+
+.pledge-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid navy;
+    border-radius: 5px;
+    box-shadow: 2;
+    padding: 0 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.pledge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: navy; */
+}
+
+.pledge-title {
+    color: navy;
+    text-align: center;
+}
+
+.pledge-list {
+    color: navy;
+}
+
+.make-pledge-button {
+    /* width: 30%;
+    margin: 1rem auto;
+    padding: 0.5rem; */
+    margin: 0.5rem auto 1rem auto;
+    height: 2rem;
+    /* height: 2rem; */
+    /* height: 50%; */
+    padding: 0.2rem 0.7rem;
+    border: 1px solid #1A1C6F;
+    align-items: flex-start;
+    /* width: 4rem; */
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: whitesmoke;
+    color: #1A1C6F;
+}
+
+.make-pledge-button:hover {
+    color: white;
+    /* border: 1.5px solid yellow; */
+    border-radius: 5px;
+    /* font-weight: 600; */
+    background-color: #1A1C6F;
+    border: 1px solid #1A1C6F;
+    /* opacity: 80%; */
+
+}
+
+.login-to-pledge {
+    text-align: center;
+}

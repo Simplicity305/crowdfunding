@@ -1,25 +1,100 @@
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #000868;
+    justify-content: space-evenly;
+    background-color: #1A1C6F;
     color: white;
+    align-items: center;
+    /* border: 1px solid rgba(126, 28, 118, 0.788); */
 }
 
-.company-name {
-    margin: auto 10px;
+.logo {
+    border-radius: 0px;
+    /* object-fit: cover; */
+    max-height: 150px;
+    width: 50%;
+}
+
+.nav-under-logo {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: top;
 }
 
 .nav-links {
 }
-.nav-links a { 
-    padding: 0 5px;
-    color: white;
-}
-.nav-links a:visited { color: yellow;}
 
-.login { 
-    margin: auto 10px;
+.nav-links a { 
+    padding: 8px 12px;
+    color: white;
+    font-weight: 500;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1.1px solid white;
+    text-decoration: none;
 }
-.login a { color: white; }
-.login a:visited { color: yellow;}
+
+.nav-links a:hover {
+    color: #1A1C6F;
+    border: 1.5px solid yellow;
+    /* font-weight: 600; */
+    background-color: yellow;
+    /* transform: scale(3); */
+}
+
+/* .nav-links a:visited { color: yellow;} */
+
+/* .login {  */
+    /* padding: 10px;
+    color: white;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid white;
+} */
+.login a { 
+    padding: 8px 12px;
+    color: #1A1C6F;
+    font-weight: 500;
+    /* background-color: white; */
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1.1px solid white;
+    color: white; 
+    text-decoration: none;
+}
+
+/* .login a:visited { color: yellow;} */
+.login a:hover { 
+    /* color: yellow; */
+    /* border: 1px solid yellow; */
+    color: #1A1C6F;
+    border: 1.5px solid yellow;
+    /* font-weight: 600; */
+    background-color: yellow;
+    /* transform: scale(3); */
+}
+
+.sign-out {
+    padding: 8px 12px;
+    color: #1A1C6F;
+    font-weight: 500;
+    /* background-color: white; */
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 1.1px solid white;
+    /* color: white;  */
+    text-decoration: none;
+}
+
+.sign-out:hover {
+        /* color: yellow; */
+    /* border: 1px solid yellow; */
+    color: #1A1C6F;
+    border: 1.5px solid yellow;
+    /* font-weight: 600; */
+    background-color: yellow;
+    /* transform: scale(3); */
+}
