@@ -26,7 +26,7 @@ function Nav(props) {
             <Link to="/" >HOME</Link>
             <Link to="/projects" >PROJECTS</Link>
         </div>
-        <img className="logo" src="/public/logo5.png"/>
+        <img className="logo" src="/logo5.png"/>
         {/* <div className="nav-under-logo"> */}
 
         <div className="login">
