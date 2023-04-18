@@ -1,7 +1,7 @@
 .project-detail-wrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.274); 
+    border: 1px solid #7190E4; 
     box-shadow: 10px rgba(184, 174, 174, 0.13);
     margin: 1rem auto 3rem auto;
     /* border-radius: 10px; */

@@ -11,6 +11,7 @@ function ListProjectsPage() {
     useEffect(() => {
         const loadProjects = async () => {
             const response = await fetch(`${import.meta.env.VITE_API_URL}projects`)
+            
             const projects = await response.json();
             projects.sort((a, b) => new Date(b.date_created).valueOf() - new Date(a.date_created).valueOf())
             setProjectList(projects)

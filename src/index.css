@@ -1,6 +1,8 @@
 
 body {
   margin: 0;
+  background-color: #7190E4;
+
 }
 
 #root {
@@ -9,6 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
 }
 
 

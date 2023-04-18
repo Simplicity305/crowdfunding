@@ -1,23 +1,51 @@
-
-.make-project-button {
+.home-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 2rem 0;
+}
+
+
+.welcome {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    border-radius: 2px;
+    padding: 0 1rem 0 1rem;
+    max-width: 1000px;
+
+}
+
+.welcome > p {
+    font-size:x-large;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+
+}
+.welcome > h1 {
+    color: #1A1C6F;
+    text-align: center;
+    font-size:xx-large;
+    /* font-size: ; */
 }
 
 .make-project-button button {
     margin: 2rem auto 3rem auto;
-    height: 3rem;
-    width: 40%;
-    /* height: 2rem; */
+    /* height: 3rem; */
+    /* width: 40%; */
+    height: 2rem;
     /* height: 50%; */
-    padding: 0.2rem 0.7rem;
-    border: 1px solid #1A1C6F;
+    padding: 0.2rem 2rem;
+    border: 1px solid whitesmoke;
     /* align-items: center; */
     /* align-items: flex-start; */
     /* width: 4rem; */
     justify-content: center;
     border-radius: 5px;
     font-weight: 500;
+    font-size: larger;
     background-color: whitesmoke;
     color: #1A1C6F;
 }
@@ -27,8 +55,9 @@
     color: #1A1C6F;
     /* border: 1.5px solid yellow; */
     border-radius: 5px;
+    /* bored */
     /* font-weight: 600; */
-    background-color: yellow;
+    background-color: white;
     /* border: 1px solid white; */
     /* opacity: 80%; */
 

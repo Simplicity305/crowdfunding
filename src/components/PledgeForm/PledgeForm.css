@@ -20,8 +20,9 @@
     max-width: 700px;
     margin: 1rem 1rem 2rem 1rem;
     max-height: 80%;
-    border: 1px solid #1A1C6F;
+    border: 1px solid #7190E4;
     background-color: white;
+    /* box-shadow: 0 0 2px 3px #889fdd; */
     padding: 2rem 0.8rem;
 }
 
@@ -86,7 +87,7 @@
     /* height: 2rem; */
     /* height: 50%; */
     padding: 0.2rem 0.7rem;
-    border: 1px solid #1A1C6F;
+    border: 1px solid #7190E4;
     align-items: center;
     /* width: 4rem; */
     border-radius: 5px;
@@ -101,7 +102,7 @@
     border-radius: 5px;
     /* font-weight: 600; */
     background-color: #1A1C6F;
-    border: 1px solid #1A1C6F;
+    border: 1px solid #7190E4;
     /* opacity: 80%; */
 
 }

@@ -2,12 +2,21 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #1A1C6F;
+    /* background-color: #0d3ab69a; */
     color: white;
     align-items: center;
     /* border: 1px solid rgba(126, 28, 118, 0.788); */
+    padding: 2rem 0 2rem 0;
 }
 
+
+.nav-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+
+    
+}
 .logo {
     border-radius: 0px;
     /* object-fit: cover; */
@@ -29,19 +38,19 @@ nav {
 
 .nav-links a { 
     padding: 8px 12px;
-    color: white;
+    color: #1A1C6F;
     font-weight: 500;
     margin: 0.5rem;
     border-radius: 5px;
-    border: 1.1px solid white;
+    border: 1.1px solid #1A1C6F;
     text-decoration: none;
 }
 
 .nav-links a:hover {
     color: #1A1C6F;
-    border: 1.5px solid yellow;
+    border: 1.5px solid white;
     /* font-weight: 600; */
-    background-color: yellow;
+    background-color: white;
     /* transform: scale(3); */
 }
 
@@ -61,8 +70,9 @@ nav {
     /* background-color: white; */
     margin: 0.5rem;
     border-radius: 5px;
-    border: 1.1px solid white;
-    color: white; 
+    border: 1.1px solid #1A1C6F;
+    color: #1A1C6F; 
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -71,9 +81,9 @@ nav {
     /* color: yellow; */
     /* border: 1px solid yellow; */
     color: #1A1C6F;
-    border: 1.5px solid yellow;
+    border: 1.5px solid white;
     /* font-weight: 600; */
-    background-color: yellow;
+    background-color: white;
     /* transform: scale(3); */
 }
 
@@ -81,10 +91,10 @@ nav {
     padding: 8px 12px;
     color: #1A1C6F;
     font-weight: 500;
-    /* background-color: white; */
-    margin: 0.5rem;
+    background-color: #7190E4;
+    margin: 0 0.5rem;
     border-radius: 5px;
-    border: 1.1px solid white;
+    border: 1.1px solid #1A1C6F;
     /* color: white;  */
     text-decoration: none;
 }
@@ -93,8 +103,8 @@ nav {
         /* color: yellow; */
     /* border: 1px solid yellow; */
     color: #1A1C6F;
-    border: 1.5px solid yellow;
+    border: 1.5px solid white;
     /* font-weight: 600; */
-    background-color: yellow;
+    background-color: white;
     /* transform: scale(3); */
 }

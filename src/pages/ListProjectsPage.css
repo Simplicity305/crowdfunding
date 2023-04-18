@@ -1,11 +1,15 @@
 .page-main-header {
-    text-align: left;
+    text-align: center;
     margin: auto;
     font-size: 2rem;
     font-weight: 600;
     padding: 1rem 0;
     color: white;
     max-width: 90%;
+    width: 100%;
+    max-width: 1000px;
+
+
 }
 
 .project-list {
@@ -14,6 +18,8 @@
     /* max-width: 80%; */
     margin: auto;
     align-items: center;
+    width: 100%;
+    max-width: 1000px;
   }
 
   /* .project-card {
@@ -31,3 +37,5 @@
     border-radius: 10px 10px 0 0;
   }
    */
+
+   

@@ -22,17 +22,21 @@ function Nav(props) {
   }
   return (
       <nav>
-        <div className="nav-links">
-            <Link to="/" >HOME</Link>
-            <Link to="/projects" >PROJECTS</Link>
-        </div>
-        <img className="logo" src="/logo5.png"/>
-        {/* <div className="nav-under-logo"> */}
 
-        <div className="login">
-            {!loggedIn && <Link className="btn" to="/login">LOGIN</Link>}
-            {loggedIn && <button className="sign-out" onClick={handleClick}>SIGN OUT</button>}
-        </div>    
+        
+        {/* <div className="nav-under-logo"> */}
+        <div className="nav-link-wrapper">
+          <div className="login">
+              {!loggedIn && <Link className="btn" to="/login">LOGIN</Link>}
+              {loggedIn && <button className="sign-out" onClick={handleClick}>SIGN OUT</button>}
+          </div>    
+          <div className="nav-links">
+              <Link to="/" >HOME</Link>
+              <Link to="/projects" >PROJECTS</Link>
+          </div>
+        </div>
+        <img className="logo" src="/logo8.png"/>
+
         {/* </div>  */}
         {/* // <span className="company-name">Sleepify</span> */}
         {/* <div id="logo">

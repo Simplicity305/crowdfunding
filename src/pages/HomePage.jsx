@@ -38,20 +38,28 @@ function HomePage() {
 
   return (
     <>
-      <div className="page-main-header">Recent Projects</div>
+      <div className="home-wrapper">
+        <div className="welcome">
+          <h1>Welcome to the world of the sleep deprived!</h1>
+          <p>When the tired are too tired to fight for more sleep, this is where you'll find them! If you have any to spare, consider donating some precious ZZZZZZs to to those who need it most. It might just make all the difference to someone. Happy sleeping!</p>
+        </div>
 
 
-      <div className="project-list">
-        {projectList.map((project, key) => <ProjectCard key={key} projectData={project} />)}
+        <div className="page-main-header">Recent Projects</div>
+
+
+        <div className="project-list">
+          {projectList.map((project, key) => <ProjectCard key={key} projectData={project} />)}
+        </div>
+
+        {/* <img src="/public/logo.gif"/> */}
+        { loggedIn && (showProjectForm
+            ? <ProjectForm />
+            : <div className="make-project-button">
+                <button  onClick={() => setShowProjectForm(true)}>Create a new project</button>
+            </div>)
+        }
       </div>
-
-      {/* <img src="/public/logo.gif"/> */}
-      { loggedIn && (showProjectForm
-          ? <ProjectForm />
-          : <div className="make-project-button">
-              <button  onClick={() => setShowProjectForm(true)}>Create a new project</button>
-          </div>)
-      }
     </>
   );
 }

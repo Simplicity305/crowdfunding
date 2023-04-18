@@ -8,9 +8,10 @@
     max-width: 700px;
     margin: 5rem auto;
     max-height: 80%;
-    border: 1px solid #1A1C6F;
+    border: 1px solid #7190E4;
     background-color: white;
     padding: 2rem 0.8rem;
+    /* box-shadow: 0 0 3px 4px blue; */
 }
 
 .login p.form-name {
@@ -43,7 +44,7 @@ input {
     width: 100%;
     margin: 0.2rem 0;
     max-width: 700px;
-    border: 1px solid navy;
+    border: 1px solid 7190E4;
     /* background-color: ; */
 }
 
